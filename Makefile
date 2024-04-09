@@ -1,6 +1,5 @@
 NAME			= libasm
 NAME_LIB		= libasm.a
-SRCS			= ft_write.s ft_read
 ASM_ASSEMBLER	= nasm
 ASM_FLAGS		= -f elf64
 ASM_EXTENSION	= .s

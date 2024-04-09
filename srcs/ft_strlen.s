@@ -1,21 +1,15 @@
 section .text
 
-global _start
+global ft_strlen
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    lea ecx, [msg]
-    mov edx, len
-    syscall
-    jmp exit
+ft_strlen:
+    mov rax, 0 ; initialize rax, our return value register, to 0
+    jmp compare ; jump to compare 'loop'
 
-exit:
-    mov eax, 1
-    mov ebx, 0
-    syscall
+increment:
+    inc rax ; increment rax, our return value
 
-section .data
-
-msg: db "casse tete ce truc quand meme"
-len: equ $-msg
+compare:
+    cmp BYTE [rdi + rax], 0 ; compares each byte (char) to 0 (C string)
+    jne increment
+    ret ; falls through this instruction if the previous 'jne' instruction condition is not met
