@@ -3,7 +3,7 @@ section .text
 global ft_strlen
 
 ft_strlen:
-    mov rax, 0 ; initialize rax, our return value register, to 0
+    xor rax, rax ; zeroing rax
     jmp compare ; jump to compare 'loop'
 
 compare:
