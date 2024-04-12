@@ -1,0 +1,33 @@
+caller-saved:
+
+8       0-3     0-1     0
+rax     eax     ax      al
+rcx     ecx     cx      cl
+rdx     edx     dx      dl
+rdi     edi     di      dil
+rsi     esi     si      sil
+rsp     esp     sp      spl
+r8      r8d     r8w     r8b
+r9      r9d     r9w     r9b
+r10     r10d    r10w    r10b
+r11     r11d    r11w    r11b
+
+callee-saved:
+
+8       0-3     0-1     0
+rbx     ebx     bx      bl 
+rbp     ebp     bp      bpl
+r12     r12d    r12w    r12b
+r13     r13d    r13w    r13b
+r14     r14d    r14w    r14b
+r15     r15d    r15w    r15b
+
+parameters:
+
+8       0-3     0-1     0
+rdi     edi     di      dil
+rsi     esi     si      sil
+rdx     edx     dx      dl
+rcx     ecx     cx      cl
+r8      r8d     r8w     r8b
+r9      r9d     r9w     r9b

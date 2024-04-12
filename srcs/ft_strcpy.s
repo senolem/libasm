@@ -7,13 +7,13 @@ ft_strcpy:
     jmp copy
 
 copy:
-    mov bl, [rsi + rax] ; copy the current byte to "1 byte" register
-    mov [rdi + rax], bl ; copy the register to dest
-    cmp bl, 0 ; compare the current byte with 0
-    je return ; if equal, we have finished
+    mov cl, [rsi + rax] ; copy the current byte to "1 byte" register
+    mov [rdi + rax], cl ; copy the register to dest
+    cmp cl, 0 ; compare the current byte with 0
+    je exit ; if equal, we have finished
     inc rax ; increment our index
     jmp copy ; loop back to copy
 
-return:
+exit:
     mov rax, rdi ; make the dest address as return value
     ret
